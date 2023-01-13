@@ -47,7 +47,7 @@ createApp({
       /(?:(?:^|.*;\s*)rubyToken\s*=\s*([^;]*).*$)|^.*$/,
       "$1"
     );
-    axios.defaults.headers.common.Authorization = token;
+    axios.defaults.headers.common.Authorization = token; // 意即在下次發送axios時，就會把token直接帶入headers中
 
     this.checkAdmin();
   },
